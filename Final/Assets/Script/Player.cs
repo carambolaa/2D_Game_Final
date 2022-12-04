@@ -17,10 +17,10 @@ public class Player : MonoBehaviour
     private void Start()
     {
         weapons[0].LevelUp();
-        hp.playerHP = hp.playerMaxHP;  
+        hp.playerHP = hp.playerMaxHP;
     }
 
-    
+
     private void Update()
     {
         float inputX = Input.GetAxis("Horizontal");
@@ -43,22 +43,18 @@ public class Player : MonoBehaviour
     }
     public void Attack()
     {
-        animator.SetTrigger("Attack");       
+        animator.SetTrigger("Attack");
     }
 
     public void ReceiveDamage()
     {       
         if(hp.playerHP < 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
         else
         {
             hp.playerHP--;
         }
-
     }
-
-
-
 }

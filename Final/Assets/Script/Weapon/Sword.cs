@@ -8,11 +8,13 @@ public class Sword : BaseWeapon
     [SerializeField] PolygonCollider2D polygonCollider2D;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(collision.gameObject);
+        if(collision.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+        }
+        else if(collision.tag == "Boss")
+        {
+            collision.GetComponent<BossController_1>().RecieveDamage(10);
+        }
     }
-
-
-
-
-
 }

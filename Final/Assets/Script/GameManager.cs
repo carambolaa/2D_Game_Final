@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static GameManager instance;
+    public bool canSpawn;
+    public float levelTime = 30f;
+
+    private void Awake()
     {
-        
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+        DontDestroyOnLoad(this.gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator LevelTimer()
     {
-        
+        yield return new WaitForSeconds(levelTime);
+        //spawn level boss here
+    }
+
+    public void EndLevel()
+    {
+        //end current level
+        //show result panel
+        //go next level
+
     }
 }
