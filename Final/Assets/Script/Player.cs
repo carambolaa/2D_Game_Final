@@ -7,7 +7,9 @@ public class Player : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] BaseWeapon[] weapons;
     
-    [SerializeField] float speed = 1f;
+    [SerializeField] public int playerSpeed = 1;
+    [SerializeField] public int playerAdDamage;
+    [SerializeField] public int playerApDamage;
     HpBar hp;
 
     private void Awake()
@@ -25,7 +27,7 @@ public class Player : MonoBehaviour
     {
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
-        transform.position += new Vector3(inputX, inputY, 0) * speed * Time.deltaTime;
+        transform.position += new Vector3(inputX, inputY, 0) * playerSpeed * Time.deltaTime;
 
         if (inputX != 0)
         {
