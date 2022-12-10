@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject optionMenuUI;
+    public GameObject characterMenuUI;
     public void OnStartButton()
     {
         SceneManager.LoadScene("Lv1");
@@ -12,7 +14,22 @@ public class MainMenu : MonoBehaviour
 
     public void OptionButton()
     {
-        Debug.Log("Option");
+        optionMenuUI.SetActive(true);
+    }
+
+    public void CharacterButton()
+    {
+        characterMenuUI.SetActive(true);
+    }
+
+    public void OptionBackButton()
+    {
+        optionMenuUI.SetActive(false);
+    }
+
+    public void CharacterBackButton()
+    {
+        characterMenuUI.SetActive(false);
     }
 
     public void QuitGame()
