@@ -26,6 +26,7 @@ public class EnemySpawnerManager : MonoBehaviour
         EnemySO enemyData = enemyDatabase[Random.Range(0, enemyDatabase.Length - 1)];
         GameObject enemyClone = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity, this.transform);
         enemyClone.GetComponent<Animator>().runtimeAnimatorController = enemyData.animatorController;
+        enemyClone.GetComponent<EnemyController>().name = enemyData.name;
         enemyClone.GetComponent<EnemyController>().damage = enemyData.damage;
     }
 }

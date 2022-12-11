@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : MonoBehaviour, IDamageable
 {
     [SerializeField] float moveSpeed = 1f;
     [SerializeField] int enemyHP;
     [SerializeField] int enemyMaxHP = 3;
     public int damage = 1;
+    private string name;
+    [SerializeField] private GameObject goldPrefab;
+    [SerializeField] private GameObject expPrefab;
 
     public bool isTrackingPlayer = true;
     GameObject player;
@@ -58,7 +61,27 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    public void RecieveDamage(int damage)
+    {
+        enemyHP -= damage;
+        if(enemyHP <= 0)
+        {
+            Destroy(this.gameObject);
+            CountKillNumber();
+            SpawnReward();
+        }
+    }
 
+    public void SpawnReward()
+    {
+        Instantiate(goldPrefab, transform.position, Quaternion.identity);
+    }
 
-
+    public void CountKillNumber()
+    {
+        if(name == "bat")
+        {
+            GameManager.instance.batKilled++;
+        }
+    }
 }

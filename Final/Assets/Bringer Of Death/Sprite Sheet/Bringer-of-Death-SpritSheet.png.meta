@@ -335,16 +335,23 @@ TextureImporter:
       name: Bringer-of-Death-SpritSheet_0
       rect:
         serializedVersion: 2
+<<<<<<< Updated upstream
         x: 86
         y: 651
         width: 40
         height: 56
+=======
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
       spriteID: 6fb70d53f0c4795f0800000000000000
       internalID: -750047184722822154
@@ -352,6 +359,7 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+<<<<<<< Updated upstream
     - serializedVersion: 2
       name: Bringer-of-Death-SpritSheet_1
       rect:
@@ -1675,10 +1683,12 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+=======
+>>>>>>> Stashed changes
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -1686,6 +1696,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< Updated upstream
       Bringer-of-Death-SpritSheet_51: -1332470889934944754
       Bringer-of-Death-SpritSheet_12: -2137382666133240926
       Bringer-of-Death-SpritSheet_26: 4072241969498346569
@@ -1726,30 +1737,9 @@ TextureImporter:
       Bringer-of-Death-SpritSheet_41: -6342980997288685656
       Bringer-of-Death-SpritSheet_21: 751812126289047221
       Bringer-of-Death-SpritSheet_1: 8445469178646879675
+=======
+>>>>>>> Stashed changes
       Bringer-of-Death-SpritSheet_0: -750047184722822154
-      Bringer-of-Death-SpritSheet_22: 6430574574124883500
-      Bringer-of-Death-SpritSheet_20: 8231058446179839085
-      Bringer-of-Death-SpritSheet_17: 5282158534819968045
-      Bringer-of-Death-SpritSheet_2: -5923306537521942286
-      Bringer-of-Death-SpritSheet_57: -4221278012398908484
-      Bringer-of-Death-SpritSheet_25: 3687449107416671509
-      Bringer-of-Death-SpritSheet_49: 8687428498307349624
-      Bringer-of-Death-SpritSheet_54: -953707883773386096
-      Bringer-of-Death-SpritSheet_59: -8457060507731139865
-      Bringer-of-Death-SpritSheet_50: -5379403063917420916
-      Bringer-of-Death-SpritSheet_52: 6565450280992480206
-      Bringer-of-Death-SpritSheet_13: 973881123878733542
-      Bringer-of-Death-SpritSheet_19: 6631781949004943560
-      Bringer-of-Death-SpritSheet_23: -6766038691376649458
-      Bringer-of-Death-SpritSheet_43: 2778454290109986065
-      Bringer-of-Death-SpritSheet_38: -2960163153839071603
-      Bringer-of-Death-SpritSheet_28: 2090659836945643480
-      Bringer-of-Death-SpritSheet_14: -7142606862941313327
-      Bringer-of-Death-SpritSheet_39: -1378873467200105373
-      Bringer-of-Death-SpritSheet_4: -1846612928519130627
-      Bringer-of-Death-SpritSheet_35: -6959215256267499731
-      Bringer-of-Death-SpritSheet_27: 8385784872082410219
-      Bringer-of-Death-SpritSheet_46: 8403998346646135688
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

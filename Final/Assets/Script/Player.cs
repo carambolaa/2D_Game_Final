@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] BaseWeapon[] weapons;
+
+    private int currentWeapon = 0;
     
     [SerializeField] public int playerSpeed = 1;
     [SerializeField] public int playerAdDamage;
@@ -18,7 +21,6 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
-        weapons[0].LevelUp();
         hp.playerHP = hp.playerMaxHP;
     }
 
@@ -38,7 +40,7 @@ public class Player : MonoBehaviour
 
         //Combat
         if (Input.GetKeyDown(KeyCode.Space))
-        { 
+        {
             Attack();
         }
 
@@ -46,6 +48,7 @@ public class Player : MonoBehaviour
     public void Attack()
     {
         animator.SetTrigger("Attack");
+        weapons[currentWeapon].Attack();
     }
 
     public void ReceiveDamage()
